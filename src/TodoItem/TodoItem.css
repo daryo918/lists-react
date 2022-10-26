@@ -1,0 +1,29 @@
+.TodoItem{
+    color: white;
+    margin: 30px;
+    width: 500px;
+    border: 3px solid white;
+    background-color: rgb(68, 68, 205);
+    list-style-type:none;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.closeButton{
+    position: absolute;
+    right: 10px;
+}
+
+.item-checkbox{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(46% at 50% 50%);   /* Set the clip path of circle*/
+    margin: 10px;
+
+}
+
+.checked{
+    color: greenyellow;
+    text-decoration: line-through;
+}
