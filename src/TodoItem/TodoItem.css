@@ -43,6 +43,12 @@
 }
 
 .item-description{
+    display:inline-block;
     font-size: 1.3rem;
     margin-left: 10px;
+
+}
+
+.item-description:first-letter{
+    text-transform: uppercase;
 }
