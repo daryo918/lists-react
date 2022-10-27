@@ -18,7 +18,7 @@ function TodoProvider(props){
       console.log('executed')
       const indeChecked = todos.findIndex(elem => elem.text === text)
       const newTodos = [...todos]
-      newTodos[indeChecked].completed = true;
+      newTodos[indeChecked].completed = !newTodos[indeChecked].completed;
       saveTodos(newTodos)
     }
   

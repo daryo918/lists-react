@@ -7,6 +7,8 @@ import { TodoItem } from '../TodoItem'
 import { CreateTodoButtom } from '../TodoButton';
 import {TodoContext} from '../TodoContext'
 import {ModalTodo} from '../Modal'
+import {LoadingAnim} from '../LoadingAnim'
+
 
 function AppUi(){
   const  {
@@ -27,7 +29,7 @@ function AppUi(){
         <TodoSearch />
     
             <TodoList>
-               {loading && <p>No desesperes , estamos cargando</p> } 
+               {loading && (<LoadingAnim></LoadingAnim>) } 
                {error && <p>ERROR SUS DATOS ESTAN COMPROMETIDOS BEEP BEEP</p> } 
                {(!loading && !filteredValues.length) && <p>Crea tu primer todo</p>}
                {filteredValues.map(todo=>(

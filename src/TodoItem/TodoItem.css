@@ -15,15 +15,27 @@
     right: 10px;
 }
 
+
+.modal-content{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.modal-table{
+    border: 1px solid white;
+    text-align:center;
+    vertical-align: center;
+}
+
 .item-checkbox{
     width: 20px;
     height: 20px;
     clip-path: circle(46% at 50% 50%);   /* Set the clip path of circle*/
-    margin: 10px;
-
+    
 }
 
 .checked{
     color: greenyellow;
     text-decoration: line-through;
 }
+
