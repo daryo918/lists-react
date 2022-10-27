@@ -5,14 +5,6 @@ import {useLocalStorate} from './useLocalStorage'
 const TodoContext=React.createContext();
 
 
- const defaultTodos=[{
-  text:'cebolla' ,completed:false},
-  {
-    text:'abolla' ,completed:false},
-    {
-      text:'guabolla' ,completed:true},
-]
-
 function TodoProvider(props){
     const {item:todos, saveItem:saveTodos,loading,error} = useLocalStorate("TODO_V1", [])
     const [searchVal, setSearch] = React.useState("");
