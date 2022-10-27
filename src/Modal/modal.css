@@ -52,6 +52,7 @@ textarea:focus {
   color:white;
   padding:10px;
   cursor: pointer;
+  border: 2px solid white;
 }
 
 .modal-save-button:hover{
