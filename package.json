@@ -39,6 +39,6 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
-  ,"hompage":"https://daryo918.github.io/lists-react/"
+  },
+  "homepage": "https://daryo918.github.io/lists-react/"
 }
