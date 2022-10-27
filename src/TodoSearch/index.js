@@ -13,7 +13,7 @@ function TodoSearch(){
 
     return(
         <React.Fragment>
-        <input onChange={onSearchValue} className="todoSearch" placeholder="Cebolla" value={searchVal} />
+        <input onChange={onSearchValue} className="todoSearch" placeholder="Buscar" value={searchVal} />
         </React.Fragment>
     );
 }

@@ -34,9 +34,16 @@
   cursor: crosshair;
 }
 textarea{
-  height:60px;
-  margin-bottom:50px;
+  width: 250px;
+  height:120px;
+  margin-bottom:30px;
   
+}
+
+textarea:focus { 
+  outline: none !important;
+  border-color: #719ECE;
+  box-shadow: 0 0 10px #719ECE;
 }
 
 .modal-save-button{
