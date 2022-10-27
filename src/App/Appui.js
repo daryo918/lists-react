@@ -19,7 +19,8 @@ function AppUi(){
             searchVal,
             CheckcompletedTodo,
             deleteTodo,
-            modalOpen
+            modalOpen,
+            setModalOpen
           }=React.useContext(TodoContext);
     
 
@@ -31,7 +32,7 @@ function AppUi(){
             <TodoList>
                {loading && (<LoadingAnim></LoadingAnim>) } 
                {error && <p>ERROR SUS DATOS ESTAN COMPROMETIDOS BEEP BEEP</p> } 
-               {(!loading && !filteredValues.length) && <p>Crea tu primer todo</p>}
+               {(!loading && !filteredValues.length) && <p>Crea tu primer <a href='#' onClick={()=>setModalOpen(true)} >todo</a></p>}
                {filteredValues.map(todo=>(
                <TodoItem key={todo.text} name={todo.text} completed={todo.completed} onAccept={()=>CheckcompletedTodo(todo.text)}
                deleteTodos={()=>deleteTodo(todo.text)}
