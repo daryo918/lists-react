@@ -1,12 +1,10 @@
 import React from "react";
-import {TodoContext} from '../TodoContext'
 import './CreateTodoButtom.css'
 
 
 
-function CreateTodoButtom(){
+function CreateTodoButtom({setModalOpen}){
     
-    const {setModalOpen} = React.useContext(TodoContext)
     
     const modalClick=(msg)=>{
         console.log('uwu')

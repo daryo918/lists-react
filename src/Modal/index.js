@@ -1,12 +1,9 @@
 import React from 'react'
 import PortalReactDOM from 'react-dom'
-import {TodoContext} from '../TodoContext'
 import './modal.css'
 
-function ModalTodo({ children }){
+function ModalTodo({modalOpen,setModalOpen,todos,saveTodos,children}){
   
-  
-  const {modalOpen,setModalOpen,todos,saveTodos}=React.useContext(TodoContext);
   
   const closeModalEv=(event)=>{
     if (event.target === event.currentTarget) {
@@ -17,6 +14,7 @@ function ModalTodo({ children }){
   }
   
   const saveTodoEv=(event)=>{
+    console.log(todos)
       let newElem=[...todos]
       const value=document.querySelector('#content-todo').value
       newElem.push({

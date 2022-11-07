@@ -2,10 +2,7 @@ import React from "react";
 import {useLocalStorate} from './useLocalStorage'
 
 
-const TodoContext=React.createContext();
-
-
-function TodoProvider(props){
+function useTodos(props){
     const {item:todos, saveItem:saveTodos,loading,error} = useLocalStorate("TODO_V1", [])
     const [searchVal, setSearch] = React.useState("");
     const [modalOpen, setModalOpen]= React.useState(false);
@@ -30,32 +27,27 @@ function TodoProvider(props){
     }
   
   
-    let filteredValues = []
+    let searchedTodos = []
   
     if (searchVal.length >= 1) {
-      filteredValues = todos.filter(comp => comp.text.toLowerCase().includes(searchVal));
+      searchedTodos = todos.filter(comp => comp.text.toLowerCase().includes(searchVal));
     } else {
-      filteredValues = todos
+      searchedTodos = todos
     }
-    return (
-        <TodoContext.Provider value={{
+    return {
             loading,
             error,
             totalTodos,
             completedTodos,
+            searchedTodos,
             searchVal,
             setSearch,
             deleteTodo,
             CheckcompletedTodo,
-            filteredValues,
             modalOpen, 
             setModalOpen,
             saveTodos,
             todos
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    )
-}
-
-export {TodoContext,TodoProvider};
+    }
+  }
+export {useTodos};
